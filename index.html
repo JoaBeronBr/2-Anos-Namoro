@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz 2 Anos de Namoro - Andressa e Joab</title>
+    <meta name="description" content="Site romântico para celebrar 2 anos de namoro de Andressa e Joab.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- === ÁREA DE EDIÇÃO - EDIT HERE === NOME = "Alice e Bob" DATA_ANIVERSARIO = "12 de Julho de 2021" IMAGEM_PRINCIPAL = "assets/IMAGEM1.jpg" GALERIA = ["assets/IMAGEM3.jpg", "assets/IMAGEM4.jpg", "assets/IMAGEM5.jpg", "assets/IMAGEM6.jpg", "assets/IMAGEM2.jpg", "assets/IMAGEM1.jpg"] MUSICA = "musica.mp3" SENHA = "123" TEXTO_CARTA = "Querido amor, ... texto da carta exemplo." -->
+    <div id="password"> <!-- Hero section -->
+        <section id="hero" class="position-relative text-center"> <img id="mainPhoto" src="assets/IMAGEM1.jpg"
+                class="img-fluid w-100" alt="Foto principal">
+            <div class="hero-text position-absolute top-50 start-50 translate-middle text-white">
+                <h1>Feliz 2 anos juntos, Andressa! <i class="fas fa-heart text-danger"></i></h1>
+                <p id="countdown" class="mb-3">Contagem regressiva para o próximo aniversário...</p>
+                <button id="openBtn" class="btn btn-light btn-lg mt-3">Abrir presente <i class="fas fa-gift"></i></button>
+            </div>
+        </section>
+        <!-- Timeline section -->
+        <section id="timeline" class="container mt-5" style="display:none;">
+            <h2 class="text-center mb-4">Nossos Momentos (alguns)</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="assets/IMAGEM2.jpg" class="card-img-top" alt="Evento 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Última viagem à Bica</h5>
+                            <p><small class="text-muted">Lembro o dia não neném</small></p>
+                            <p class="card-text">Dia que passeamos no Ipu sozinhos, e aonde tinha porta, entramos.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- DUPLICAR ESTE BLOCO PARA MAIS EVENTOS NA LINHA DO TEMPO -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="assets/IMAGEM3.jpg" class="card-img-top" alt="Evento 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Festa de Aniversário</h5>
+                            <p><small class="text-muted">Você sabe que não sou bom com datas</small></p>
+                            <p class="card-text">Onde tiramos essa foto muito bonita, uma das minhas favoritas também</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicar blocos .col-md-4 acima para adicionar mais eventos -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="assets/IMAGEM4.jpg" class="card-img-top" alt="Evento 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Ver o Açude</h5>
+                            <p><small class="text-muted">Nem tentei</small></p>
+                            <p class="card-text">Peguei a moto do pai e desabei no mei dos mato sem conhecer nada kkkk.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery section -->
+        <section id="gallery" class="container mt-5" style="display:none;">
+            <h2 class="text-center mb-4">Galeria</h2>
+            <div class="row">
+                <div class="col-6 col-md-4 mb-3">
+                    <img src="assets/IMAGEM3.jpg" class="img-fluid rounded gallery-img" alt="Nós na praia"
+                        data-bs-toggle="modal" data-bs-target="#galleryModal1">
+                </div>
+                <div class="col-6 col-md-4 mb-3">
+                    <img src="assets/IMAGEM4.jpg" class="img-fluid rounded gallery-img" alt="Nós no cinema"
+                        data-bs-toggle="modal" data-bs-target="#galleryModal2">
+                </div>
+                <div class="col-6 col-md-4 mb-3">
+                    <img src="assets/IMAGEM5.jpg" class="img-fluid rounded gallery-img" alt="Viagem"
+                        data-bs-toggle="modal" data-bs-target="#galleryModal3">
+                </div>
+                <div class="col-6 col-md-4 mb-3">
+                    <img src="assets/IMAGEM6.jpg" class="img-fluid rounded gallery-img" alt="Evento especial"
+                        data-bs-toggle="modal" data-bs-target="#galleryModal4">
+                </div>
+                <div class="col-6 col-md-4 mb-3">
+                    <img src="assets/IMAGEM2.jpg" class="img-fluid rounded gallery-img" alt="Passeio"
+                        data-bs-toggle="modal" data-bs-target="#galleryModal5">
+                </div>
+                <div class="col-6 col-md-4 mb-3">
+                    <img src="assets/IMAGEM1.jpg" class="img-fluid rounded gallery-img" alt="Celebração"
+                        data-bs-toggle="modal" data-bs-target="#galleryModal6">
+                </div>
+            </div>
+            <!-- Modals for gallery images -->
+            <div class="modal fade" id="galleryModal1" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Nós na praia</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="assets/IMAGEM3.jpg" class="img-fluid" alt="Nós na praia">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="galleryModal2" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Cinema</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="assets/IMAGEM4.jpg" class="img-fluid" alt="Cinema">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="galleryModal3" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Viagem em Família</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="assets/IMAGEM5.jpg" class="img-fluid" alt="Viagem em Família">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="galleryModal4" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Evento Especial</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="assets/IMAGEM6.jpg" class="img-fluid" alt="Evento Especial">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="galleryModal5" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Um lindo passeio</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="assets/IMAGEM2.jpg" class="img-fluid" alt="Um lindo passeio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="galleryModal6" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Celebração</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="assets/IMAGEM1.jpg" class="img-fluid" alt="Celebração">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card / Letter section -->
+        <section id="card" class="container mt-5" style="display:none;">
+            <h2 class="text-center mb-4">Carta</h2>
+            <div class="card p-4">
+                <p id="cardText">Querido amor, cada dia ao seu lado é um presente. Obrigada por todos os momentos incríveis que vivemos juntos. Você é a pessoa mais especial da minha vida, e eu te amo mais a cada dia. Feliz 2 anos juntos! ❤️</p>
+                <div class="mt-3">
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- Easter Egg: Heart icon -->
+    <div id="heart" title="Clique 3 vezes para surpresa"
+        style="position: fixed; bottom: 20px; right: 20px; font-size: 2.5rem; cursor: pointer;">❤️</div>
+    <p id="secretMsg" class="text-center mt-5 d-none">Você me faz muito feliz! ❤️</p> <!-- Modal: How to edit -->
+    <div class="modal fade" id="howToEdit" tabindex="-1" aria-labelledby="howToEditLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Como editar este site</h5> <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Use esta lista para saber onde editar os conteúdos:</p>
+                    <ul>
+                        <li><strong>#mainPhoto</strong>: trocar a imagem principal do presente (no Hero).</li>
+                        <li><strong>#openBtn</strong>: texto do botão para abrir o presente.</li>
+                        <li><strong>#timeline</strong>: seção da linha do tempo (eventos). Para adicionar eventos,
+                            duplique o bloco de evento no <code>#timeline</code>.</li>
+                        <li><strong>#gallery</strong>: galeria de imagens. Substitua as imagens e legendas nos
+                            <code>&lt;img&gt;</code> e nos modais correspondentes.</li>
+                        <li><strong>#cardText</strong>: texto da carta de amor. Edite o parágrafo que contém a mensagem.
+                        </li>
+                        <li><strong>#playMusic</strong> e <strong>#pauseMusic</strong>: botões para controlar a música
+                            de fundo. O arquivo de áudio está em <code>assets/musica.mp3</code>.</li>
+                        <li><strong>#downloadVoucher</strong>: botão do vale-presente que chama a impressão. Edite o
+                            texto do vale e utilize <code>vale.pdf</code> para o arquivo a baixar.</li>
+                        <li><strong>#surprise</strong>: seção surpresa final. O botão de <em>Celebrar</em> gera confete;
+                            edite a mensagem final e o arquivo PDF.</li>
+                        <li><strong>#heart</strong>: ícone de coração. Clique 3 vezes para revelar a mensagem secreta em
+                            <strong>#secretMsg</strong>.</li>
+                        <li><strong>#password</strong>: ID do wrapper de conteúdo protegido (proteção por senha no
+                            script). Alterar a variável <code>SENHA</code> no topo do HTML (comentário de edição).</li>
+                    </ul>
+                    <p>Para alterar textos ou imagens, edite diretamente o conteúdo em cada arquivo ou em
+                        <code>css/styles.css</code> para paleta de cores.</p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
